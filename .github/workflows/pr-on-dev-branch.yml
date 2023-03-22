@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Validate PR on integration branch
+name: Validate PR on dev branch
 
 # Definition when the workflow should run
 on:
