@@ -8,7 +8,6 @@
 
 global with sharing class BookingInvoker {
 
-
     @future(callout=true)
     public static void invokeBookingAsync(List<Id> opportunityIds) {
         invokePostStatusChangedBooking(opportunityIds);
