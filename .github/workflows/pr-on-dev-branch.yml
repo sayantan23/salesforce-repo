@@ -70,7 +70,7 @@ jobs:
             - name: 'Populate auth file with SFDX_URL secret of dev org'
               shell: bash
               run: |
-                  echo ${{ secrets.SFDX_DEV_URL}} > ./SFDX_DEV_URL.txt
+                  echo ${{ secrets.SFDX_DEV_URL }} > ./SFDX_DEV_URL.txt
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Dev Org'
