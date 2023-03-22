@@ -7,8 +7,7 @@
 // This is another update
 
 global with sharing class BookingInvoker {
-   
-    
+
 
     @future(callout=true)
     public static void invokeBookingAsync(List<Id> opportunityIds) {
