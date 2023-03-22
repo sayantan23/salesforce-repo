@@ -13,6 +13,7 @@ global with sharing class BookingInvoker {
         invokePostStatusChangedBooking(opportunityIds);
     }
 
+
     public static void invokePostStatusChangedBooking(List<Id> opportunityIds) {
 
         List<Opportunity> opportunities = [SELECT Id, AgreementForm__c,DealType__c,RequestorId__c,AccountId FROM Opportunity WHERE Id IN :opportunityIds];
