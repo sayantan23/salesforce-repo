@@ -12,7 +12,6 @@ global with sharing class BookingInvoker {
     public static void invokeBookingAsync(List<Id> opportunityIds) {
         invokePostStatusChangedBooking(opportunityIds);
     }
-    
 
 
     public static void invokePostStatusChangedBooking(List<Id> opportunityIds) {
