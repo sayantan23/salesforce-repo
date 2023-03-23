@@ -2,10 +2,6 @@
  * Created by sayantan.sb on 19.04.22.
  */
 
- //This source code belongs to dummy-feature branch
- //This is a code update
-// This is another update
-
 global with sharing class BookingInvoker {
 
     @future(callout=true)
