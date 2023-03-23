@@ -1,6 +1,6 @@
 public class WeatherResponse {
 
-	public Request request;
+	/*public Request request;
 	public Location location;
 	public Current current;
 
@@ -45,5 +45,5 @@ public class WeatherResponse {
 	
 	public static WeatherResponse parse(String json) {
 		return (WeatherResponse) System.JSON.deserialize(json, WeatherResponse.class);
-	}
+	}*/
 }

@@ -3,7 +3,7 @@
  */
 
 public with sharing class OpportunityTriggerHandler {
-    public OpportunityTriggerHandler() {
+    /*public OpportunityTriggerHandler() {
     }
 
     public void OnBeforeInsert(List<Opportunity> newOpportunities) {
@@ -30,6 +30,6 @@ public with sharing class OpportunityTriggerHandler {
         System.debug('OpportunityTriggerHandler.OnBeforeUpdate :: begins');
         OpportunityActions.preUpdateAction (newOpportunities, oldOpportunities, newOpportunitiesMap, oldOpportunitiesMap);
         System.debug('OpportunityTriggerHandler.OnBeforeUpdate :: ends');
-    }
+    }*/
 
 }

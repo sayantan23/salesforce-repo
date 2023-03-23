@@ -4,7 +4,7 @@
 
 public with sharing class LogUtil {
 
-    public static void insertDebugEvent(String businessCase,String objectName,String objectId,String message,String level){
+   /* public static void insertDebugEvent(String businessCase,String objectName,String objectId,String message,String level){
 
         try{
             Debug__c debug = new Debug__c();
@@ -22,6 +22,6 @@ public with sharing class LogUtil {
             System.debug('Error in saving Debug object');
         }
 
-    }
+    }*/
 
 }
