@@ -1,6 +1,6 @@
 trigger AccountTrigger on Account (before update, after update) {
     
-    if(Trigger.isBefore){
+   /* if(Trigger.isBefore){
         for(Account acc : Trigger.New){
             if(acc.DunsNumber == null) {
                 acc.DunsNumber = '123456789';
@@ -12,6 +12,6 @@ trigger AccountTrigger on Account (before update, after update) {
         for(Account acc : Trigger.New){
             DemoFuture.invokeWeatherAPI('New York');
     	}	
-    }    
+    }   */ 
     
 }
