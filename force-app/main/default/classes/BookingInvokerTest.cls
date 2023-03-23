@@ -31,6 +31,9 @@ private class BookingInvokerTest {
         insert con;
 
         Opportunity opp = new Opportunity();
+        opp.Name = 'My Great Opportunity';
+        opp.StageName = 'Closed Won';
+        opp.CloseDate = System.today();
         opp.AgreementForm__c = 'CONTRACT';
         opp.DealType__c = 'SINGLE';
         opp.RequestorId__c = 100;
