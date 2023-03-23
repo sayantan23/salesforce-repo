@@ -133,7 +133,8 @@ global with sharing class BookingInvoker {
             bookingRequest.request.accountAccessTypes = accessTypeList;
             System.debug('After populating Account and Contact info in BookingRequest for opportunityId : '+opportunityId);
         } catch (Exception e) {
-            LogUtil.insertDebugEvent('Booking Request Creation on Opportunity Stage Closed WON','Opportunity',opportunityId,e.getMessage(),'ERROR');
+            System.debug('Booking Request Creation on Opportunity Stage Closed WON');
+           // LogUtil.insertDebugEvent('Booking Request Creation on Opportunity Stage Closed WON','Opportunity',opportunityId,e.getMessage(),'ERROR');
         }
     }
 
