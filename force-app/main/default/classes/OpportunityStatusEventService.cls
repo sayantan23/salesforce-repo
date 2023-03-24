@@ -4,7 +4,7 @@
 
 public with sharing class OpportunityStatusEventService {
 
-    @future
+    /*@future
     public static void publishPostStatusChangedNotificationAsync(List<Id> opportunityIds) {
         publishPostStatusChangedNotification(opportunityIds);
     }
@@ -198,5 +198,6 @@ public with sharing class OpportunityStatusEventService {
         }
 
     }
+    */
 
 }

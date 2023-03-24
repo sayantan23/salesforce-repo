@@ -1,6 +1,6 @@
-public class DemoQueueable implements Queueable {
+public class DemoQueueable  {
     
-    Account acc;
+    /*Account acc;
     String city;
     public DemoQueueable(Account account, String cityname){
         acc=account;
@@ -46,7 +46,7 @@ public class DemoQueueable implements Queueable {
             throw new MyException('API Not Reachable');
         }
 
-    }
+    }*/
     
 
 }

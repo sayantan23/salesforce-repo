@@ -1,7 +1,7 @@
 public class DemoFuture {
     
     
-    public static HttpRequest createRequest(String cityName) {      
+    /*public static HttpRequest createRequest(String cityName) {      
        // String url = 'http://api.weatherstack.com/current?access_key=7a51b58ddcce37cd145d9bd2aa3e608a&query='+cityName;
          String url = 'http://api.invalid.com/current?access_key=7a51b58ddcce37cd145d9bd2aa3e608a&query='+cityName;
         HttpRequest req = new HttpRequest();
@@ -46,6 +46,6 @@ public class DemoFuture {
             throw new MyException('API Not Reachable');
         }
 
-    }
+    }*/
 
 }

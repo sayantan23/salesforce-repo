@@ -9,6 +9,7 @@ global with sharing class BookingInvoker {
         invokePostStatusChangedBooking(opportunityIds);
     }
 
+
     public static void invokePostStatusChangedBooking(List<Id> opportunityIds) {
 
         List<Opportunity> opportunities = [SELECT Id, AgreementForm__c,DealType__c,RequestorId__c,AccountId FROM Opportunity WHERE Id IN :opportunityIds];
@@ -74,14 +75,16 @@ global with sharing class BookingInvoker {
                 //For this reason the trigger has been configured to not work for batch
                 Integer bookingId = invokeBookingAPI(bookingRequest);
                 if(bookingId>-1){
-                    LogUtil.insertDebugEvent('Successfully Created BookingRequest on Opportunity Stage Closed WON','Opportunity',opportunity.id,'Booking Request Creation Successful, bookingId = '+bookingId,'DEBUG');
+                    //LogUtil.insertDebugEvent('Successfully Created BookingRequest on Opportunity Stage Closed WON','Opportunity',opportunity.id,'Booking Request Creation Successful, bookingId = '+bookingId,'DEBUG');
+                    System.debug('Successfully Created BookingRequest on Opportunity Stage Closed WON, bookingId = '+bookingId);
                 }else{
-                    LogUtil.insertDebugEvent('BookingRequest Invocation Failed on Opportunity Stage Closed WON','Opportunity',opportunity.id,'Error in Booking API Invocation','ERROR');
+                    //LogUtil.insertDebugEvent('BookingRequest Invocation Failed on Opportunity Stage Closed WON','Opportunity',opportunity.id,'Error in Booking API Invocation','ERROR');
+                    System.debug('BookingRequest Invocation Failed on Opportunity Stage Closed WON');
                 }
 
 
             } catch(Exception e) {
-                LogUtil.insertDebugEvent('BookingRequest Invocation on Opportunity Stage Closed WON','Opportunity',opportunity.id,e.getMessage(),'ERROR');
+                //LogUtil.insertDebugEvent('BookingRequest Invocation on Opportunity Stage Closed WON','Opportunity',opportunity.id,e.getMessage(),'ERROR');
                 System.debug('Error on BookingRequest Invocation on Opportunity Stage Closed WON, opportunityId=' + opportunity.id + '. StackTrace: ' + e.getStackTraceString());
             }
         }
@@ -130,7 +133,8 @@ global with sharing class BookingInvoker {
             bookingRequest.request.accountAccessTypes = accessTypeList;
             System.debug('After populating Account and Contact info in BookingRequest for opportunityId : '+opportunityId);
         } catch (Exception e) {
-            LogUtil.insertDebugEvent('Booking Request Creation on Opportunity Stage Closed WON','Opportunity',opportunityId,e.getMessage(),'ERROR');
+            System.debug('Booking Request Creation on Opportunity Stage Closed WON');
+           // LogUtil.insertDebugEvent('Booking Request Creation on Opportunity Stage Closed WON','Opportunity',opportunityId,e.getMessage(),'ERROR');
         }
     }
 

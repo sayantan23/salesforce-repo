@@ -3,6 +3,8 @@
  */
 
 trigger OpportunityTrigger on Opportunity (before insert, before update, before delete, after insert, after update, after delete) {
+    
+    /*
     if (!System.isBatch()) {
         System.debug('OpportunityTrigger for Opportunity (not batch and not future) :: begins');
         OpportunityTriggerHandler handler = new OpportunityTriggerHandler();
@@ -35,4 +37,6 @@ trigger OpportunityTrigger on Opportunity (before insert, before update, before 
             System.debug('OpportunityTrigger for update :: ends');
         }
     }
+
+    */
 }
