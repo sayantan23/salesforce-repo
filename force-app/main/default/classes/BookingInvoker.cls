@@ -2,7 +2,11 @@
  * Created by sayantan.sb on 19.04.22.
  */
 
+ //This is an updategit 
+
 global with sharing class BookingInvoker {
+
+    //my shitty change
 
     @future(callout=true)
     public static void invokeBookingAsync(List<Id> opportunityIds) {
