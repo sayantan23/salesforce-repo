@@ -2,9 +2,15 @@
  * Created by sayantan.sb on 19.04.22.
  */
 
+<<<<<<< HEAD
+ //This is an updategit 
+=======
  //This is an update
+>>>>>>> 8510ba69f4965c2ff80275dfde7dd4b0be92d520
 
 global with sharing class BookingInvoker {
+
+    //my shitty change
 
     @future(callout=true)
     public static void invokeBookingAsync(List<Id> opportunityIds) {
